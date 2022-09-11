@@ -1,0 +1,191 @@
+//EKTELESH GIA 4 AFTOKINHTA. STATEGY => RANDOM
+
+//DIALOG WINDOW
+
+FIRE    1 move_east: f-1,f-16,f-2,f-7
+<== f-1     (space (name S1) (state P))
+==> f-23    (space (name S1) (state EMPTY))
+<== f-2     (space (name S2) (state EMPTY))
+==> f-24    (space (name S2) (state P))
+<== f-7     (platform (name P1) (space S1) (state EMPTY))
+==> f-25    (platform (name P1) (space S2) (state EMPTY))
+FIRE    2 enter_car: f-25,f-12
+
+CAR ENTERING<== f-25    (platform (name P1) (space S2) (state EMPTY))
+==> f-26    (platform (name P1) (space S2) (state NOT_EMPTY))
+<== f-12    (car (id ZXN1533) (state WAITING))
+==> f-27    (car (id ZXN1533) (state PARKED))
+FIRE    3 move_south: f-4,f-20,f-23,f-9
+<== f-4     (space (name S4) (state P))
+==> f-28    (space (name S4) (state EMPTY))
+<== f-23    (space (name S1) (state EMPTY))
+==> f-29    (space (name S1) (state P))
+<== f-9     (platform (name P3) (space S4) (state EMPTY))
+==> f-30    (platform (name P3) (space S1) (state EMPTY))
+FIRE    4 move_west: f-5,f-18,f-28,f-10
+<== f-5     (space (name S5) (state P))
+==> f-31    (space (name S5) (state EMPTY))
+<== f-28    (space (name S4) (state EMPTY))
+==> f-32    (space (name S4) (state P))
+<== f-10    (platform (name P4) (space S5) (state EMPTY))
+==> f-33    (platform (name P4) (space S4) (state EMPTY))
+FIRE    5 move_east: f-32,f-18,f-31,f-33
+<== f-32    (space (name S4) (state P))
+==> f-34    (space (name S4) (state EMPTY))
+<== f-31    (space (name S5) (state EMPTY))
+==> f-35    (space (name S5) (state P))
+<== f-33    (platform (name P4) (space S4) (state EMPTY))
+==> f-36    (platform (name P4) (space S5) (state EMPTY))
+FIRE    6 move_north: f-29,f-20,f-34,f-30
+<== f-29    (space (name S1) (state P))
+==> f-37    (space (name S1) (state EMPTY))
+<== f-34    (space (name S4) (state EMPTY))
+==> f-38    (space (name S4) (state P))
+<== f-30    (platform (name P3) (space S1) (state EMPTY))
+==> f-39    (platform (name P3) (space S4) (state EMPTY))
+FIRE    7 move_west: f-24,f-16,f-37,f-26
+<== f-24    (space (name S2) (state P))
+==> f-40    (space (name S2) (state EMPTY))
+<== f-37    (space (name S1) (state EMPTY))
+==> f-41    (space (name S1) (state P))
+<== f-26    (platform (name P1) (space S2) (state NOT_EMPTY))
+==> f-42    (platform (name P1) (space S1) (state NOT_EMPTY))
+FIRE    8 move_west: f-3,f-17,f-40,f-8
+<== f-3     (space (name S3) (state P))
+==> f-43    (space (name S3) (state EMPTY))
+<== f-40    (space (name S2) (state EMPTY))
+==> f-44    (space (name S2) (state P))
+<== f-8     (platform (name P2) (space S3) (state EMPTY))
+==> f-45    (platform (name P2) (space S2) (state EMPTY))
+FIRE    9 enter_car: f-45,f-13
+
+CAR ENTERING<== f-45    (platform (name P2) (space S2) (state EMPTY))
+==> f-46    (platform (name P2) (space S2) (state NOT_EMPTY))
+<== f-13    (car (id ZXN1523) (state WAITING))
+==> f-47    (car (id ZXN1523) (state PARKED))
+FIRE   10 move_east: f-44,f-17,f-43,f-46
+<== f-44    (space (name S2) (state P))
+==> f-48    (space (name S2) (state EMPTY))
+<== f-43    (space (name S3) (state EMPTY))
+==> f-49    (space (name S3) (state P))
+<== f-46    (platform (name P2) (space S2) (state NOT_EMPTY))
+==> f-50    (platform (name P2) (space S3) (state NOT_EMPTY))
+FIRE   11 move_east: f-41,f-16,f-48,f-42
+<== f-41    (space (name S1) (state P))
+==> f-51    (space (name S1) (state EMPTY))
+<== f-48    (space (name S2) (state EMPTY))
+==> f-52    (space (name S2) (state P))
+<== f-42    (platform (name P1) (space S1) (state NOT_EMPTY))
+==> f-53    (platform (name P1) (space S2) (state NOT_EMPTY))
+FIRE   12 move_south: f-38,f-20,f-51,f-39
+<== f-38    (space (name S4) (state P))
+==> f-54    (space (name S4) (state EMPTY))
+<== f-51    (space (name S1) (state EMPTY))
+==> f-55    (space (name S1) (state P))
+<== f-39    (platform (name P3) (space S4) (state EMPTY))
+==> f-56    (platform (name P3) (space S1) (state EMPTY))
+FIRE   13 move_west: f-35,f-18,f-54,f-36
+<== f-35    (space (name S5) (state P))
+==> f-57    (space (name S5) (state EMPTY))
+<== f-54    (space (name S4) (state EMPTY))
+==> f-58    (space (name S4) (state P))
+<== f-36    (platform (name P4) (space S5) (state EMPTY))
+==> f-59    (platform (name P4) (space S4) (state EMPTY))
+FIRE   14 move_north: f-52,f-21,f-57,f-53
+<== f-52    (space (name S2) (state P))
+==> f-60    (space (name S2) (state EMPTY))
+<== f-57    (space (name S5) (state EMPTY))
+==> f-61    (space (name S5) (state P))
+<== f-53    (platform (name P1) (space S2) (state NOT_EMPTY))
+==> f-62    (platform (name P1) (space S5) (state NOT_EMPTY))
+FIRE   15 move_west: f-49,f-17,f-60,f-50
+<== f-49    (space (name S3) (state P))
+==> f-63    (space (name S3) (state EMPTY))
+<== f-60    (space (name S2) (state EMPTY))
+==> f-64    (space (name S2) (state P))
+<== f-50    (platform (name P2) (space S3) (state NOT_EMPTY))
+==> f-65    (platform (name P2) (space S2) (state NOT_EMPTY))
+FIRE   16 move_south: f-6,f-22,f-63,f-11
+<== f-6     (space (name S6) (state P))
+==> f-66    (space (name S6) (state EMPTY))
+<== f-63    (space (name S3) (state EMPTY))
+==> f-67    (space (name S3) (state P))
+<== f-11    (platform (name P5) (space S6) (state EMPTY))
+==> f-68    (platform (name P5) (space S3) (state EMPTY))
+FIRE   17 move_north: f-67,f-22,f-66,f-68
+<== f-67    (space (name S3) (state P))
+==> f-69    (space (name S3) (state EMPTY))
+<== f-66    (space (name S6) (state EMPTY))
+==> f-70    (space (name S6) (state P))
+<== f-68    (platform (name P5) (space S3) (state EMPTY))
+==> f-71    (platform (name P5) (space S6) (state EMPTY))
+FIRE   18 move_south: f-70,f-22,f-69,f-71
+<== f-70    (space (name S6) (state P))
+==> f-72    (space (name S6) (state EMPTY))
+<== f-69    (space (name S3) (state EMPTY))
+==> f-73    (space (name S3) (state P))
+<== f-71    (platform (name P5) (space S6) (state EMPTY))
+==> f-74    (platform (name P5) (space S3) (state EMPTY))
+FIRE   19 move_east: f-61,f-19,f-72,f-62
+<== f-61    (space (name S5) (state P))
+==> f-75    (space (name S5) (state EMPTY))
+<== f-72    (space (name S6) (state EMPTY))
+==> f-76    (space (name S6) (state P))
+<== f-62    (platform (name P1) (space S5) (state NOT_EMPTY))
+==> f-77    (platform (name P1) (space S6) (state NOT_EMPTY))
+FIRE   20 move_north: f-64,f-21,f-75,f-65
+<== f-64    (space (name S2) (state P))
+==> f-78    (space (name S2) (state EMPTY))
+<== f-75    (space (name S5) (state EMPTY))
+==> f-79    (space (name S5) (state P))
+<== f-65    (platform (name P2) (space S2) (state NOT_EMPTY))
+==> f-80    (platform (name P2) (space S5) (state NOT_EMPTY))
+FIRE   21 move_east: f-55,f-16,f-78,f-56
+<== f-55    (space (name S1) (state P))
+==> f-81    (space (name S1) (state EMPTY))
+<== f-78    (space (name S2) (state EMPTY))
+==> f-82    (space (name S2) (state P))
+<== f-56    (platform (name P3) (space S1) (state EMPTY))
+==> f-83    (platform (name P3) (space S2) (state EMPTY))
+FIRE   22 enter_car: f-83,f-14
+
+CAR ENTERING<== f-83    (platform (name P3) (space S2) (state EMPTY))
+==> f-84    (platform (name P3) (space S2) (state NOT_EMPTY))
+<== f-14    (car (id ZXN1543) (state WAITING))
+==> f-85    (car (id ZXN1543) (state PARKED))
+FIRE   23 move_south: f-58,f-20,f-81,f-59
+<== f-58    (space (name S4) (state P))
+==> f-86    (space (name S4) (state EMPTY))
+<== f-81    (space (name S1) (state EMPTY))
+==> f-87    (space (name S1) (state P))
+<== f-59    (platform (name P4) (space S4) (state EMPTY))
+==> f-88    (platform (name P4) (space S1) (state EMPTY))
+FIRE   24 move_north: f-87,f-20,f-86,f-88
+<== f-87    (space (name S1) (state P))
+==> f-89    (space (name S1) (state EMPTY))
+<== f-86    (space (name S4) (state EMPTY))
+==> f-90    (space (name S4) (state P))
+<== f-88    (platform (name P4) (space S1) (state EMPTY))
+==> f-91    (platform (name P4) (space S4) (state EMPTY))
+FIRE   25 move_west: f-82,f-16,f-89,f-84
+<== f-82    (space (name S2) (state P))
+==> f-92    (space (name S2) (state EMPTY))
+<== f-89    (space (name S1) (state EMPTY))
+==> f-93    (space (name S1) (state P))
+<== f-84    (platform (name P3) (space S2) (state NOT_EMPTY))
+==> f-94    (platform (name P3) (space S1) (state NOT_EMPTY))
+FIRE   26 move_west: f-73,f-17,f-92,f-74
+<== f-73    (space (name S3) (state P))
+==> f-95    (space (name S3) (state EMPTY))
+<== f-92    (space (name S2) (state EMPTY))
+==> f-96    (space (name S2) (state P))
+<== f-74    (platform (name P5) (space S3) (state EMPTY))
+==> f-97    (platform (name P5) (space S2) (state EMPTY))
+FIRE   27 enter_car: f-97,f-15
+
+CAR ENTERING<== f-97    (platform (name P5) (space S2) (state EMPTY))
+==> f-98    (platform (name P5) (space S2) (state NOT_EMPTY))
+<== f-15    (car (id ZXN1553) (state WAITING))
+==> f-99    (car (id ZXN1553) (state PARKED))
+FIRE   28 is_goal: *
+

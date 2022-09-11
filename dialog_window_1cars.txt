@@ -1,0 +1,23 @@
+//EKTELESH GIA 1 AFTOKINHTA. STATEGY => RANDOM
+
+FIRE    1 move_west: f-3,f-14,f-2,f-8
+<== f-3     (space (name S3) (state P))
+==> f-20    (space (name S3) (state EMPTY))
+<== f-2     (space (name S2) (state EMPTY))
+==> f-21    (space (name S2) (state P))
+<== f-8     (platform (name P2) (space S3) (state EMPTY))
+==> f-22    (platform (name P2) (space S2) (state EMPTY))
+FIRE    2 enter_car: f-22,f-12
+
+CAR ENTERING<== f-22    (platform (name P2) (space S2) (state EMPTY))
+==> f-23    (platform (name P2) (space S2) (state NOT_EMPTY))
+<== f-12    (car (id ZXN1533) (state WAITING))
+==> f-24    (car (id ZXN1533) (state PARKED))
+FIRE    3 move_east: f-21,f-14,f-20,f-23
+<== f-21    (space (name S2) (state P))
+==> f-25    (space (name S2) (state EMPTY))
+<== f-20    (space (name S3) (state EMPTY))
+==> f-26    (space (name S3) (state P))
+<== f-23    (platform (name P2) (space S2) (state NOT_EMPTY))
+==> f-27    (platform (name P2) (space S3) (state NOT_EMPTY))
+FIRE    4 is_goal: *
